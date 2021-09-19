@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Comensal, click a la carta</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--liberia de íconos en línea-->
 </head>
 <body>
+    <div class="flex-container"> <!--contenedor principal-->
+        <section class="column main-left">
+            <header class="row">
+                <span class="gutter"></span>
+                <div class="search-container">
+                    <form action=""> <!--action se usa para enviar los comandos al servidor o una pagina especifica-->
+                    <!--los elementos del formulario vienen pre-estilados en el navegador, 
+                        esto puede cambiar la manera en la que el CSS modifica los elementos.
+                        Por ejemplo la etiqueta <button> tiene padding y margenes añadidas por defecto.-->
+                    <input type="text" placeholder="Hoy quiero comer..." name="search-bar">
+                    <a><button type="submit"><i class="fa fa-search"></i></button></a>
+                    </form>
+                </div>
+                <span class="gutter"></span>
+            </header>
+            <span class="vertical-gutter"></span>
+            <div class="row">
+                <span class="gutter"></span>
+                <div class="content-divider green"></div>
+                <span class="gutter"></span>
+            </div>
+            <main class="row">
+                <span class="gutter"></span>
+                <section class="column description">
+                    <span class="vertical-gutter"></span>
+                    <p>
+                        <strong>Comensal</strong> es una web app de escritorio donde el usuario es el <strong>ingrediente</strong> más importante.
+                    </p>
+                    <ol>
+                        <li><strong>Busca</strong> tu platillo favorito.</li>
+                        <li><strong>Escoge</strong> un restaurante para  prepararlo.</li>
+                        <li><strong>Registra</strong> tu datos, <strong><em>envía</em></strong> tu pedido y <strong>disfruta</strong>!</li>
+                    </ol>
+                    <p>
+                        ¡Pedir a <strong>domicilio</strong> jamás fue tan <strong>fácil</strong>!
+                    </p>
+                    <span class="vertical-gutter"></span>
+                    <div class="content-divider blue"></div>
+                    <span class="vertical-gutter"></span>
+                </section>
+                <span class="gutter"></span>
+                <section class="column catalogue">
+                    <span class="vertical-gutter"></span>
+                    <div class="content-divider red"></div>
+                    <p>
+                        Catálogo<br>
+                        Pendiente implementación
+                    </p>
+                    <span class="vertical-gutter"></span>
+                </section>
+                <span class="gutter"></span>
+            </main>        
+        </section>
+        <section class="column main-right">
+            <nav id="vertical_navbar" class="column">
+                <span class="vertical-gutter"></span>
+                <img src="/img/logo.jpg" alt="logo" id="logo_navbar"/>
+                <span class="vertical-spacer"></span>
+                <a id="link_Registro" href="/registro.html" ><button id="btn_Registro">Registrarse</button></a>
+                <span class="vertical-gutter"></span>
+            </nav>
+        </section>
+    </div>
+    <hr>
+    <footer>
+        <address>
+            <a href="mailto:pruebas@pruebas.org">pruebas@pruebas.org</a>
+        </address>
+    </footer>
     
 </body>
 </html>

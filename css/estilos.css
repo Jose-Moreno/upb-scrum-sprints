@@ -1,0 +1,180 @@
+* {
+    /*[box-sizing: border-box]
+        Al cambiar el ancho y alto de cada elemento, facilita su escalado, al incluir en el calculo los siguientes:
+        + contenido
+        + padding
+        + borde        
+        width = border + padding + width of the content
+        height = border + padding + height of the content
+    */
+    box-sizing: border-box;
+}
+.flex-container{
+    /*flexbox
+        Es un modulo de diagramación que "flexibiliza" el diseño de estructuras 
+        "receptivas" (responsive) sin usar propiedades float o posicionamiento directo.
+    */
+    display: flex;
+    flex-direction: row;
+    background-color: #f5f5f5;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.grid-auto-columns{
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 288px;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-gap: 20px;
+}
+
+.main-left{
+    width: 75%;
+
+}
+
+.main-right{
+    width: 25%;
+}
+
+.quarter{
+    width: 25%;
+}
+
+.half{
+    width: 50%;
+}
+
+.threequarter{
+    width: 75%;
+}
+
+.full{
+    width: 100%;
+}
+
+.search-container{
+    /* Por defecto el display viene como block. Se debe poner como flex*/
+    display: flex;
+    /*flex-wrap: nowrap;*/
+    flex: 3 1 auto;
+    max-width: 900px;
+    width: 80%;
+}
+
+.search-container > form{
+    /* display:contents
+        este atributo hace que la etiqueta no cree una "caja" y logra que los contenidos se vean tal cual,
+        para estilarlos sin preocuparse por la etiqueta padre
+        */
+    display: contents;
+}
+
+.search-container > form > input{
+    flex: 3 1 auto;
+    width: 80%;
+}
+
+.search-container > form > a {
+    display: contents;
+}
+
+.search-container > form > a > button{
+    flex: 0 0 auto;
+    max-width: 48px;
+    max-height: 48px;
+}
+
+.gutter{
+    /*[flex]
+        flex tiene 3 valores: flex-grow, flex-shrink, flex-basis
+        flex-basis tiene prioridad si esta determinado junto con atributo width*/
+    flex: 1 0 auto;
+    width: auto;
+}
+.vertical-gutter{
+    /*[flex]
+        flex tiene 3 valores: flex-grow, flex-shrink, flex-basis
+        flex-basis tiene prioridad si esta determinado junto con atributo width*/
+    flex: 1 0 auto;
+    width: auto;
+    height: auto;
+    min-height: 32px;
+    max-height: 32px;
+}
+.vertical-spacer{
+    /*[flex]
+        flex tiene 3 valores: flex-grow, flex-shrink, flex-basis
+        flex-basis tiene prioridad si esta determinado junto con atributo width*/
+    flex: 3 0 auto;
+    width: auto;
+    height: auto;
+    min-height: 32px;
+}
+
+
+.description{
+    flex: 3 1 288px; /*flex-basis tiene prioridad si esta determinado junto con atributo width*/
+    width: 50%;
+}
+
+.description > p {
+    padding: 0%;
+    margin: 0%;
+}
+.catalogue{
+    flex: 3 1 288px;
+    width: 50%;
+}
+
+.content-divider{
+    flex: 3 0 auto;
+    /*width: 100%;*/ /*Si se fuerza este ancho, siempre tomara todo el ancho del contenedor.*/
+    height: 8px;
+    max-height: 8px;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+#vertical_navbar{
+    flex: 1 0 auto;
+}
+
+#logo_navbar{
+    max-width: 128px;
+    border-radius: 8%; /*Esta propiedad redondea los bordes del contenedor*/
+    align-self: center;
+}
+
+#link_Registro{
+    display: contents;
+}
+
+#btn_Registro{
+    flex: 1 0 auto;
+    max-height: 88px;
+}
+
+/* header{
+    height: 100%;
+} */
