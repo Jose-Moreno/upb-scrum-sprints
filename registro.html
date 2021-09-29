@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <link type="text/css" href="estilos.css" rel="stylesheet">
+    <script src="validaciones.js"></script> 
   </head>
 <body id="body-registro">
   <div id="tarjeta-registro">
@@ -15,7 +16,7 @@
       <input type="password" id="in_contrasena" name="in_contrasena" value=""><br><br>
       <label id="et_confirmar_contrasena" name="et_confirmar_contrasena">Confirmar contraseña:</label><br>
       <input type="password" id="in_confirmar_contrasena" name="in_confirmar_contrasena" value=""><br><br><br>
-      <button type="button" id="btn_registrar_usuario" name="btn_registrar_usuario">Registrar</button>
+      <button type="button" id="btn_registrar_usuario" name="btn_registrar_usuario" onclick="validar_todo(in_nombre_usuario.value,in_contrasena.value,in_confirmar_contrasena.value)">Registrar</button>
     </form> 
   </div>
 </body>
