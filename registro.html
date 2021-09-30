@@ -10,15 +10,18 @@
 
     <form id="form_registrarse" name="form_registrarse">
       <label id="et_nombre" name="et_nombre">Nombre de usuario:</label><br>
-      <input type="text" id="in_nombre_usuario" name="in_nombre_usuario" value="" onchange="validar_nombre_usuario(document.getElementById('in_nombre_usuario').value)"><br><br>
+      <!--<input type="text" id="in_nombre_usuario" name="in_nombre_usuario" value="" onchange="validar_nombre_usuario(document.getElementById('in_nombre_usuario').value)"><br><br>-->
+      <input type="text" id="in_nombre_usuario" name="in_nombre_usuario" value=""><br><br>
       
       <label id="et_contrasena" name="et_contrasena">Contraseña:</label><br>
-      <input type="password" id="in_contrasena" name="in_contrasena" value="" onchange="validar_contrasena(document.getElementById('in_contrasena').value)"><br><br>
+      <!-- <input type="password" id="in_contrasena" name="in_contrasena" value="" onchange="validar_contrasena(document.getElementById('in_contrasena').value)"><br><br> -->
+      <input type="password" id="in_contrasena" name="in_contrasena" value=""><br><br>
       
       <label id="et_confirmar_contrasena" name="et_confirmar_contrasena">Confirmar contraseña:</label><br>
-      <input type="password" id="in_confirmar_contrasena" name="in_confirmar_contrasena" value="" onchange="confirmar_contrasena(document.getElementById('in_contrasena').value,document.getElementById('in_confirmar_contrasena').value)"><br><br><br>
-      
-      <button type="button" id="btn_registrar_usuario" name="btn_registrar_usuario">Registrar</button>
+      <!-- <input type="password" id="in_confirmar_contrasena" name="in_confirmar_contrasena" value="" onchange="confirmar_contrasena(document.getElementById('in_contrasena').value,document.getElementById('in_confirmar_contrasena').value)"><br><br><br> -->
+      <input type="password" id="in_confirmar_contrasena" name="in_confirmar_contrasena" value=""><br><br><br>
+
+      <button type="button" id="btn_registrar_usuario" name="btn_registrar_usuario" onclick="agregarRegistro()">Registrar</button>
     </form> 
   </div>
   <script src="validaciones.js"></script>
