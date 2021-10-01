@@ -1,55 +1,34 @@
-function validar_nombre_usuario(usuario){
-    const maximop=30
-    const minimop=6
-    var regExp = /^([a-zA-ZñÑ_-]){6,30}$/
-    if(usuario.length >= minimop && usuario.length <= maximop){
-        if (regExp.test(usuario) == true){
-            val_usuario = true;
-         }
+let registros = [];
 
+function agregarRegistro(){
+    let usuario = document.getElementById("in_usuario").value;
+    let contrasena = document.getElementById("in_contrasena").value;
+    let confirmacion_contrasena = document.getElementById("in_confirmar_contrasena").value;
+    let nuevo_usuario = {
+        usuario: usuario,
+        contrasena: contrasena,
+        confirmar_contrasena: confirmacion_contrasena
     }
 
-    else {val_usuario = false}
-    
-    return val_usuario;
-   
-
-    }
-
-function validar_contrasena(password){
-    const minimop=6
-    var regExp = /^([a-zA-Z0-9]){6,100}$/
-    if(password.length >= minimop){
-        if(regExp.test(password) == true){
-            val_password = true;
-        }
-    }
-
-    else {val_password = false}
-    
-    return val_password;
+    registros.push(nuevo_usuario);
+    console.log(registros)
 
 }
 
-function confirmar_contrasena(password1, password2){
-    const minimop=6
-    var regExp2 = /^([a-zA-Z0-9]){6,100}$/
-    if(password1.length >= minimop){
-        if(regExp2.test(password1) == true){
-            if(regExp2.test(password2) == true){
-                if(password1 == password2){
-                    confi_password = true;
-                }
-            }
-        }    
-    }
+function OrdenarArreglo(registros){
+    let registros_ordenardos = registros.sort(function(a, b){
+        let x = a.usuario.toLowerCase();
+        let y = b.usuario.toLowerCase();
+        if (x < y) {return -1;}
+        if (x > y) {return 1;}
+        return 0;
+      });
 
-    else {confi_password = false}
-
-    return confi_password;
+    console.log(registros_ordenardos)
+    return registros_ordenardos;
 
 }
 
-module.exports.validar_nombre_usuario = validar_nombre_usuario;
-module.exports.validar_contrasena = validar_contrasena;
-module.exports.confirmar_contrasena = confirmar_contrasena;
+module.exports.registros = registros;
+module.exports.OrdenarArreglo = OrdenarArreglo;
+module.exports.agregarRegistro = agregarRegistro;
