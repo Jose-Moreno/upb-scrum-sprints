@@ -1,0 +1,1 @@
+select * from usuarios order by id desc limit 5;
