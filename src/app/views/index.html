@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Para llamar código con EJS se usa <% "codigo javascript: variables, ciclos, condicionales, etc" %> -->
+    <!-- https://ejs.co/#docs -->
+    <div>
+        <table style="display:table; border:1px solid;padding: 2em;">
+        <tr>
+            <th>ID</th>
+            <th>User</th>
+            <th>Contraseña</th>
+        </tr>
+        <!-- Este es un ciclo FOR comun y corriente pero permite crear etiquetas html gracias al preprocesado de EJS -->
+        <% for (var i = 0; i < indice.length; i ++) { %> <!-- En este caso <%%> no tiene signo igual por que no hay salida de datos-->
+            <tr>
+            <td><%= indice[i].id %></td> <!-- Notese el uso del "igual" <%= %> cuando se debe evaluar una expresión para retornar un valor -->
+            <td><%= indice[i].usuario %></td>
+            <td><%= indice[i].contrasena %></td>
+            </tr>
+        <% } %>
+        </table>
+    </div>
+    
+    <!-- Desde el formulario se indica que se usará el método POST -->
+    <!-- Aparte si se van a tener varios inputs para interactuar con le servidor-->
+    <!-- se usa el atributo 'formaction' en cada componente ya que estos sobreescriben el atributo 'action' en la etiqueta de formulario-->
+    <form action="/" method="POST">
+        <input name="usuario" placeholder="usuario"></input>
+        <input name="contrasena" placeholder="contraseña"></input>
+        <button type="submit" formaction="/enviar">Enviar Registro</button>
+    </form>
+</body>
+</html>
