@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="stylesheets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  </head>
+
+  <head>
+      <%- include('../partials/head'); %>
+  </head>
+<body id="body-registro">
+  <div id="tarjeta-registro">
+    <h2 id="h2-registro">Digite sus datos</h2>
+
+    <form id="form_registrarse" name="form_registrarse">
+        <div class="row">
+          <div class="input-field col offset-s4 s4">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="Usuario" type="text" class="validate">
+            <label for="Usuario">Usuario</label>
+          </div>
+      </div>
+      <div class="row">
+        <div class="input-field col offset-s4 s4">
+          <i class="material-icons prefix">fiber_pin</i>
+          <input id="password" type="password" class="validate">
+          <label for="password">Contraseña</label>
+        </div>
+      </div>
+      <a href="/page" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Ingresar</a>
+    </form>
+  </div>
+
+  <footer>
+      <%- include('../partials/footer'); %>
+  </footer>
+  <script src="validaciones.js"></script>
+</body>
+</html>
