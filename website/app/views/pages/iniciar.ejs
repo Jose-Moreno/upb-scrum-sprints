@@ -5,6 +5,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="stylesheets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <title><%= title %> - Tu Pedido.co</title>
   </head>
 
   <head>
@@ -14,28 +15,38 @@
   <div id="tarjeta-registro">
     <h2 id="h2-registro">Digite sus datos</h2>
 
-    <form id="form_registrarse" name="form_registrarse">
+    <form id="form_registrarse" name="form_registrarse" method="post">
         <div class="row">
           <div class="input-field col offset-s4 s4">
             <i class="material-icons prefix">account_circle</i>
-            <input id="Usuario" type="text" class="validate">
-            <label for="Usuario">Usuario</label>
+            <input id="usuario" type="text" class="validate" name="usuario">
+            <label for="usuario">Usuario</label>
           </div>
       </div>
       <div class="row">
         <div class="input-field col offset-s4 s4">
           <i class="material-icons prefix">fiber_pin</i>
-          <input id="password" type="password" class="validate">
+          <input id="password" type="password" class="validate" name="password">
           <label for="password">Contraseña</label>
         </div>
       </div>
-      <a href="/page" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Ingresar</a>
+      <button class="btn-large waves-effect waves-light teal lighten-1" type="submit" name="action">Ingresar</button>
     </form>
+    <% if (error.length) { %>
+      <div class="row">
+        <p><%= error %></p>
+      </div>
+    <% } %>
   </div>
+
 
   <footer>
       <%- include('../partials/footer'); %>
   </footer>
-  <script src="validaciones.js"></script>
+  <!-- <script src="validaciones.js"></script> -->
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="javascripts/materialize.js"></script>
+  <script src="javascripts/init.js"></script>
 </body>
 </html>
