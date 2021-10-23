@@ -1,15 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="stylesheets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <title><%= title %> - Tu Pedido.co</title>
-  </head>
-
-  <head>
-      <%- include('../partials/head'); %>
+    <%- include('../partials/head') %>
   </head>
 <body id="body-registro">
   <div id="tarjeta-registro">
@@ -47,12 +39,8 @@
   </div>
 
   <footer>
-      <%- include('../partials/footer'); %>
+      <%- include('../partials/footer') %>
   </footer>
-  <!-- <script src="validaciones.js"></script> -->
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="javascripts/materialize.js"></script>
-  <script src="javascripts/init.js"></script>
+  <%- include('../partials/scripts') %>
 </body>
 </html>

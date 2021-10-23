@@ -52,6 +52,56 @@ p {
   font-size: inherit;
 }
 
+.sidenav li > a {
+  color: rgba(0, 0, 0, 0.87);
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  /* height: 48px; */
+  line-height: 48px;
+  padding: 0 32px;
+}
+
+.palette-red{
+  color:#ff4d4d;
+  /* text-shadow: 3px 3px 10px rgb(214, 221, 240); */
+}
+.palette-blue{
+  color:#3b5cfd;
+  /* text-shadow: 3px 3px 10px rgb(214, 221, 240); */
+}
+.palette-yellow{
+  color:#ffbb4d;
+  /*text-shadow: 3px 3px 3px rgb(0, 0, 0);*/
+}
+
+.container-fit{
+  width: 100%;
+  /*margin: auto 0;*/
+}
+.sticky-nav{
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+ }
+
+.sticky-button-bot{
+  min-width: 70%;
+  width: 90%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  bottom: 7%; /* Stay at the top */
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
 footer.page-footer {
   margin: 0;
 }
@@ -115,7 +165,6 @@ footer.page-footer {
     color:#ff4d4d;
     font-size: 37px;
     /* text-shadow: 3px 3px 10px rgb(214, 221, 240); */
-
 }
 
 #in_nombre_usuario{
