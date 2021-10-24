@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('../partials/head') %>
+  </head>
+
+<body>
+  <div class="container-fit">
+    <div class="row">
+      <div class="col s12 m10 no-padding">
+        <div id="index-banner" class="parallax-container">
+          <div class="section no-pad-bot">
+            <div class="container">
+              <br><br>
+              <div class="row center">
+                <img src="images/logo.svg" width="256px" height="256px"/>
+              </div>
+
+              <div class="row center">
+                <h1 class="header center palette-red">Manual de uso</h1>
+                <h4 class="header light white-text">Instrucciones, rutas y funcionalidades.</h4>
+              </div>
+            </div>
+          </div>
+          <div class="parallax"><img src="images/background1.jpg" alt="Unsplashed background img 1"></div>
+        </div>
+        <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="icon-block" id="icon_block_1">
+              <h2 class="center brown-text"><i class="material-icons">important_devices</i></h2>
+              <h5 class="center">Sitio web para escritorio</h5>
+
+              <p class="light">La intención de la aplicación es proporcionar un servicio de comidas gourmet a domicilio accesible principalmente desde computadores de escritorio.</p>
+              <p class="light">Esta aplicación web se diseño para responder a la demanda de servicios de <em>delivery</em> o domicilios de comidas, tema seleccionado para el <strong>NRC 53416</strong>.</p>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">handyman</i></h2>
+              <h5 class="center">Partes del sitio</h5>
+              <ul>
+                <li class="light"><p><strong><a href="/index">/index</a></strong> Página de inicio <br>
+                  <strong>Contenedor principal</strong> - Descripción del proyecto, botón de registro, <em>footer</em> con datos del equipo.<br>
+                  <strong>Barra de navegación lateral</strong> - Logo del proyecto, enlace al manual y botón de ingreso.</p></li>
+                <li class="light"><strong>
+                  <p>
+                    <a href="/registro">/registro</a></strong> Formulario de registro
+                    <br><strong>Usuario</strong> acepta valores <strong>alfabéticos</strong>
+                    <br><strong>Contraseña</strong> acepta valores <strong>alfanumericos</strong>
+                  </p>
+                </li>
+                <li class="light"><strong><p><a href="/iniciar">/iniciar</a>
+                  </strong> Formulario de ingreso
+                  <br><strong>Usuario</strong> acepta valores <strong>alfabéticos</strong>
+                  <br><strong>Contraseña</strong> acepta valores <strong>alfanumericos</strong>
+                </li>
+                <li class="light"><strong><p><a href="/page">/page</a></strong> Catálogo interno de compra (diseño no funcional)</p></li>
+                <li class="light"><strong><p><a href="/manual">/manual</a></strong> Breve documentación de usuario</p></li>
+              </ul>
+              
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="icon-block">
+              <h2 class="center brown-text"><i class="material-icons">rate_review</i></h2>
+              <h5 class="center"> Técnologias</h5>
+              <p class="light">Esta aplicación web se desarrollo con técnologías <em>html5, Node.js, Express, MySQL</em> y otras tecnologías competitivas para optimizar tiempos de producción. Adicionalmente se realizó el despliegue en una instancia de servidor tipo EC2 a través de Amazon Web Services por medio del entorno integrado de desarrollo <em>Cloud9.</em></p>
+            </div>
+          </div>
+        </div>
+
+        </div>
+        <footer>
+          <%- include('../partials/footer') %>
+        </footer>
+      </div>
+      <div id="nav-mobile" class="right-aligned sidenav sidenav-fixed col s12 m2">
+        <%- include('../partials/navbar') %>
+      </div>
+    </div>
+  </div>
+
+<%- include('../partials/scripts') %>
+
+</body>
+</html>
